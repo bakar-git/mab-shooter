@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/peaceful-piano-royalty-free-calm-relaxing-background-music-no-copyright_4eDxZ4Kb.mp3-9a28c527d62ee2141cf04acca9ea8899.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/peaceful-piano-royalty-free-calm-relaxing-background-music-no-copyright_4eDxZ4Kb.mp3"
+dest_files=[ "res://.import/peaceful-piano-royalty-free-calm-relaxing-background-music-no-copyright_4eDxZ4Kb.mp3-9a28c527d62ee2141cf04acca9ea8899.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

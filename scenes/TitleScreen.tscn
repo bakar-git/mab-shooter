@@ -1,0 +1,533 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://assets/images/Background/Parallex Background/04_Forest.png" type="Texture" id=1]
+[ext_resource path="res://assets/fonts/ALGER.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/images/Background/Parallex Background/06_Forest.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/Background/Parallex Background/09_Forest.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/Background/Parallex Background/10_Sky.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/Background/Parallex Background/01_Mist.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/Background/Parallex Background/03_Particles.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/Background/Parallex Background/08_Forest.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/Background/Parallex Background/07_Forest.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/Background/Parallex Background/05_Particles.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/Background/Parallex Background/02_Bushes.png" type="Texture" id=11]
+[ext_resource path="res://assets/sounds/peaceful-piano-royalty-free-calm-relaxing-background-music-no-copyright_4eDxZ4Kb.mp3" type="AudioStream" id=12]
+[ext_resource path="res://assets/fonts/AGENCYB.TTF" type="DynamicFontData" id=13]
+[ext_resource path="res://scenes/Fonts/TitleScreenButtonFonts.tres" type="DynamicFont" id=14]
+[ext_resource path="res://scripts/TitleScreen.gd" type="Script" id=15]
+[ext_resource path="res://assets/images/ice-icon-1641.png" type="Texture" id=16]
+[ext_resource path="res://Other/Buttons/TitleScreenButton_Focused.tres" type="StyleBox" id=17]
+[ext_resource path="res://Other/Buttons/TitleScreenButton_Pressed.tres" type="StyleBox" id=18]
+[ext_resource path="res://Other/Buttons/TitleScreenButton_Normal.tres" type="StyleBox" id=19]
+[ext_resource path="res://Other/Buttons/TitleScreenButton_Hover.tres" type="StyleBox" id=20]
+[ext_resource path="res://assets/images/Characters/Groot/Groot.png" type="Texture" id=21]
+[ext_resource path="res://assets/images/Characters/Panda/Panda.png" type="Texture" id=22]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+bg_color = Color( 0.168627, 0.611765, 0.905882, 0.431373 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="Gradient" id=12]
+offsets = PoolRealArray( 0.185185 )
+colors = PoolColorArray( 0, 0, 0, 0.784314 )
+
+[sub_resource type="GradientTexture2D" id=8]
+gradient = SubResource( 12 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 25
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 30
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 50.0
+content_margin_bottom = 50.0
+bg_color = Color( 0.109804, 0.352941, 0.529412, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource( 15 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scale = Vector2( 0.56, 0.56 )
+transform = Transform2D( 0.56, 0, 0, 0.56, 0, 0 )
+
+[node name="1_Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.1, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/1_Sky"]
+texture = ExtResource( 5 )
+centered = false
+
+[node name="2_Forest1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.1, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/2_Forest1"]
+texture = ExtResource( 4 )
+centered = false
+
+[node name="3_Forest2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/3_Forest2"]
+texture = ExtResource( 8 )
+centered = false
+
+[node name="4_Forest3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/4_Forest3"]
+texture = ExtResource( 9 )
+centered = false
+
+[node name="5_Forest4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.4, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/5_Forest4"]
+texture = ExtResource( 3 )
+centered = false
+
+[node name="6_Particles1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/6_Particles1"]
+texture = ExtResource( 10 )
+centered = false
+
+[node name="7_Forest5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.6, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/7_Forest5"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="8_Particles2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/8_Particles2"]
+texture = ExtResource( 7 )
+centered = false
+
+[node name="9_Bushes" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.8, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/9_Bushes"]
+texture = ExtResource( 11 )
+centered = false
+
+[node name="10_Mist" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/10_Mist"]
+texture = ExtResource( 6 )
+centered = false
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -30.0
+autoplay = true
+
+[node name="MENU" type="Node2D" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="MENU"]
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_constants/margin_top = 120
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MENU/MarginContainer"]
+margin_top = 120.0
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_constants/separation = 24
+
+[node name="LOGO" type="Label" parent="MENU/MarginContainer/VBoxContainer"]
+margin_left = 159.0
+margin_right = 864.0
+margin_bottom = 152.0
+size_flags_horizontal = 4
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "MAB SHOOTER"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Section_main_menu" type="MarginContainer" parent="MENU/MarginContainer/VBoxContainer"]
+margin_top = 176.0
+margin_right = 1024.0
+margin_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_top = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MENU/MarginContainer/VBoxContainer/Section_main_menu"]
+margin_top = 15.0
+margin_right = 1024.0
+margin_bottom = 304.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="MENU/MarginContainer/VBoxContainer/Section_main_menu/VBoxContainer"]
+margin_left = 379.0
+margin_right = 645.0
+margin_bottom = 71.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Btn_create_server" type="Button" parent="MENU/MarginContainer/VBoxContainer/Section_main_menu/VBoxContainer/MarginContainer"]
+margin_right = 266.0
+margin_bottom = 71.0
+focus_neighbour_top = NodePath("../../MarginContainer3/Btn_exit")
+focus_neighbour_bottom = NodePath("../../MarginContainer2/Btn_join_server")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 14 )
+custom_styles/hover = ExtResource( 20 )
+custom_styles/pressed = ExtResource( 18 )
+custom_styles/focus = ExtResource( 17 )
+custom_styles/normal = ExtResource( 19 )
+text = "Create Server"
+
+[node name="MarginContainer2" type="MarginContainer" parent="MENU/MarginContainer/VBoxContainer/Section_main_menu/VBoxContainer"]
+margin_left = 401.0
+margin_top = 91.0
+margin_right = 623.0
+margin_bottom = 162.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Btn_join_server" type="Button" parent="MENU/MarginContainer/VBoxContainer/Section_main_menu/VBoxContainer/MarginContainer2"]
+margin_right = 222.0
+margin_bottom = 71.0
+focus_neighbour_top = NodePath("../../MarginContainer/Btn_create_server")
+focus_neighbour_bottom = NodePath("../../MarginContainer3/Btn_exit")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 14 )
+custom_styles/hover = ExtResource( 20 )
+custom_styles/pressed = ExtResource( 18 )
+custom_styles/focus = ExtResource( 17 )
+custom_styles/normal = ExtResource( 19 )
+text = "Join Server"
+
+[node name="MarginContainer3" type="MarginContainer" parent="MENU/MarginContainer/VBoxContainer/Section_main_menu/VBoxContainer"]
+margin_left = 470.0
+margin_top = 182.0
+margin_right = 553.0
+margin_bottom = 253.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Btn_exit" type="Button" parent="MENU/MarginContainer/VBoxContainer/Section_main_menu/VBoxContainer/MarginContainer3"]
+margin_right = 83.0
+margin_bottom = 71.0
+focus_neighbour_top = NodePath("../../MarginContainer2/Btn_join_server")
+focus_neighbour_bottom = NodePath("../../MarginContainer/Btn_create_server")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 14 )
+custom_styles/hover = ExtResource( 20 )
+custom_styles/pressed = ExtResource( 18 )
+custom_styles/focus = ExtResource( 17 )
+custom_styles/normal = ExtResource( 19 )
+text = "Exit"
+
+[node name="SecondMenu" type="Node2D" parent="."]
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="SecondMenu"]
+margin_right = 1080.0
+margin_bottom = 600.0
+
+[node name="TextureRect" type="TextureRect" parent="SecondMenu/MarginContainer"]
+margin_right = 1080.0
+margin_bottom = 600.0
+texture = SubResource( 8 )
+expand = true
+
+[node name="Section_create_server" type="MarginContainer" parent="SecondMenu/MarginContainer"]
+visible = false
+margin_right = 1080.0
+margin_bottom = 600.0
+custom_constants/margin_right = 150
+custom_constants/margin_left = 150
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SecondMenu/MarginContainer/Section_create_server"]
+margin_left = 150.0
+margin_top = 227.0
+margin_right = 930.0
+margin_bottom = 373.0
+size_flags_vertical = 4
+custom_constants/separation = 20
+
+[node name="Txt_server_ip" type="Label" parent="SecondMenu/MarginContainer/Section_create_server/VBoxContainer"]
+margin_top = 50.0
+margin_right = 780.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 9 )
+align = 1
+
+[node name="Txt_max_clients" type="Label" parent="SecondMenu/MarginContainer/Section_create_server/VBoxContainer"]
+margin_top = 100.0
+margin_right = 780.0
+margin_bottom = 130.0
+custom_fonts/font = SubResource( 9 )
+text = "Max Clients : 8"
+align = 1
+
+[node name="Btn_submit_create_server" type="Button" parent="SecondMenu/MarginContainer/Section_create_server/VBoxContainer"]
+margin_left = 353.0
+margin_top = 150.0
+margin_right = 426.0
+margin_bottom = 196.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 11 )
+custom_styles/hover = ExtResource( 20 )
+custom_styles/pressed = ExtResource( 18 )
+custom_styles/focus = ExtResource( 17 )
+custom_styles/normal = ExtResource( 19 )
+text = "Start"
+
+[node name="Section_join_server" type="MarginContainer" parent="SecondMenu/MarginContainer"]
+visible = false
+margin_right = 1080.0
+margin_bottom = 600.0
+custom_constants/margin_right = 150
+custom_constants/margin_left = 150
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SecondMenu/MarginContainer/Section_join_server"]
+margin_left = 150.0
+margin_top = 235.0
+margin_right = 930.0
+margin_bottom = 365.0
+size_flags_vertical = 4
+custom_constants/separation = 20
+
+[node name="Txt_error_connect" type="Label" parent="SecondMenu/MarginContainer/Section_join_server/VBoxContainer"]
+margin_right = 780.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SecondMenu/MarginContainer/Section_join_server/VBoxContainer"]
+margin_top = 84.0
+margin_right = 780.0
+margin_bottom = 114.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Server IP" type="Label" parent="SecondMenu/MarginContainer/Section_join_server/VBoxContainer/HBoxContainer"]
+margin_right = 102.0
+margin_bottom = 30.0
+size_flags_horizontal = 4
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 9 )
+text = "Server IP : "
+align = 1
+uppercase = true
+
+[node name="Fld_serverIP" type="LineEdit" parent="SecondMenu/MarginContainer/Section_join_server/VBoxContainer/HBoxContainer"]
+margin_left = 106.0
+margin_right = 780.0
+margin_bottom = 30.0
+focus_next = NodePath("../../Btn_submit_join_server")
+focus_previous = NodePath("../../Btn_submit_join_server")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_to_text_length = true
+deselect_on_focus_loss_enabled = false
+caret_blink = true
+caret_blink_speed = 0.3
+
+[node name="Btn_submit_join_server" type="Button" parent="SecondMenu/MarginContainer/Section_join_server/VBoxContainer"]
+margin_left = 344.0
+margin_top = 134.0
+margin_right = 435.0
+margin_bottom = 180.0
+focus_next = NodePath("../HBoxContainer/Fld_serverIP")
+focus_previous = NodePath("../HBoxContainer/Fld_serverIP")
+size_flags_horizontal = 4
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 11 )
+custom_styles/hover = ExtResource( 20 )
+custom_styles/pressed = ExtResource( 18 )
+custom_styles/focus = ExtResource( 17 )
+custom_styles/normal = ExtResource( 19 )
+text = "Submit"
+
+[node name="CustomizationMENU" type="Node2D" parent="."]
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="CustomizationMENU"]
+margin_right = 1080.0
+margin_bottom = 600.0
+
+[node name="TextureRect" type="TextureRect" parent="CustomizationMENU/MarginContainer"]
+margin_right = 1080.0
+margin_bottom = 600.0
+texture = SubResource( 8 )
+expand = true
+
+[node name="Section_name_customization" type="MarginContainer" parent="CustomizationMENU/MarginContainer"]
+visible = false
+margin_right = 1080.0
+margin_bottom = 600.0
+custom_constants/margin_right = 150
+custom_constants/margin_left = 150
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CustomizationMENU/MarginContainer/Section_name_customization"]
+margin_left = 150.0
+margin_top = 252.0
+margin_right = 930.0
+margin_bottom = 348.0
+size_flags_vertical = 4
+custom_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CustomizationMENU/MarginContainer/Section_name_customization/VBoxContainer"]
+margin_right = 780.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Name" type="Label" parent="CustomizationMENU/MarginContainer/Section_name_customization/VBoxContainer/HBoxContainer"]
+margin_right = 62.0
+margin_bottom = 30.0
+size_flags_horizontal = 4
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 9 )
+text = "NAME : "
+align = 1
+uppercase = true
+
+[node name="Fld_name" type="LineEdit" parent="CustomizationMENU/MarginContainer/Section_name_customization/VBoxContainer/HBoxContainer"]
+margin_left = 66.0
+margin_right = 780.0
+margin_bottom = 30.0
+focus_next = NodePath("../../Btn_submit_name")
+focus_previous = NodePath("../../Btn_submit_name")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_to_text_length = true
+deselect_on_focus_loss_enabled = false
+placeholder_text = "Name must be under 5 characters"
+placeholder_alpha = 0.4
+caret_blink = true
+caret_blink_speed = 0.3
+
+[node name="Btn_submit_name" type="Button" parent="CustomizationMENU/MarginContainer/Section_name_customization/VBoxContainer"]
+margin_left = 357.0
+margin_top = 50.0
+margin_right = 422.0
+margin_bottom = 96.0
+focus_next = NodePath("../HBoxContainer/Fld_name")
+focus_previous = NodePath("../HBoxContainer/Fld_name")
+size_flags_horizontal = 4
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 11 )
+custom_styles/hover = ExtResource( 20 )
+custom_styles/pressed = ExtResource( 18 )
+custom_styles/focus = ExtResource( 17 )
+custom_styles/normal = ExtResource( 19 )
+text = "Next"
+
+[node name="Section_character_customization" type="MarginContainer" parent="CustomizationMENU/MarginContainer"]
+visible = false
+margin_right = 1080.0
+margin_bottom = 600.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CustomizationMENU/MarginContainer/Section_character_customization"]
+margin_left = 372.0
+margin_top = 219.0
+margin_right = 708.0
+margin_bottom = 380.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 50
+
+[node name="btn_panda_select" type="Button" parent="CustomizationMENU/MarginContainer/Section_character_customization/HBoxContainer"]
+margin_right = 143.0
+margin_bottom = 161.0
+focus_neighbour_left = NodePath("../btn_groot_selet")
+focus_neighbour_right = NodePath("../btn_groot_selet")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 14 )
+custom_styles/hover = ExtResource( 20 )
+custom_styles/pressed = ExtResource( 18 )
+custom_styles/focus = ExtResource( 17 )
+custom_styles/normal = SubResource( 13 )
+text = "Panda"
+icon_align = 1
+
+[node name="Sprite" type="Sprite" parent="CustomizationMENU/MarginContainer/Section_character_customization/HBoxContainer/btn_panda_select"]
+position = Vector2( 72, 83 )
+scale = Vector2( 0.276374, 0.332857 )
+texture = ExtResource( 22 )
+
+[node name="btn_groot_selet" type="Button" parent="CustomizationMENU/MarginContainer/Section_character_customization/HBoxContainer"]
+margin_left = 193.0
+margin_right = 336.0
+margin_bottom = 161.0
+focus_neighbour_left = NodePath("../btn_panda_select")
+focus_neighbour_right = NodePath("../btn_panda_select")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 14 )
+custom_styles/hover = ExtResource( 20 )
+custom_styles/pressed = ExtResource( 18 )
+custom_styles/focus = ExtResource( 17 )
+custom_styles/normal = SubResource( 13 )
+text = "Panda"
+icon_align = 1
+
+[node name="Sprite" type="Sprite" parent="CustomizationMENU/MarginContainer/Section_character_customization/HBoxContainer/btn_groot_selet"]
+position = Vector2( 72, 79.4572 )
+scale = Vector2( 0.342029, 0.375238 )
+texture = ExtResource( 21 )
+
+[node name="Cursor" type="Sprite" parent="."]
+modulate = Color( 1.30196, 1.30196, 1.30196, 0.823529 )
+position = Vector2( 52, 34 )
+scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 16 )
+
+[connection signal="pressed" from="MENU/MarginContainer/VBoxContainer/Section_main_menu/VBoxContainer/MarginContainer/Btn_create_server" to="." method="_on_Btn_create_server_pressed"]
+[connection signal="pressed" from="MENU/MarginContainer/VBoxContainer/Section_main_menu/VBoxContainer/MarginContainer2/Btn_join_server" to="." method="_on_Btn_join_server_pressed"]
+[connection signal="pressed" from="MENU/MarginContainer/VBoxContainer/Section_main_menu/VBoxContainer/MarginContainer3/Btn_exit" to="." method="_on_Btn_exit_pressed"]
+[connection signal="pressed" from="SecondMenu/MarginContainer/Section_create_server/VBoxContainer/Btn_submit_create_server" to="." method="_on_Btn_submit_create_server_pressed"]
+[connection signal="pressed" from="SecondMenu/MarginContainer/Section_join_server/VBoxContainer/Btn_submit_join_server" to="." method="_on_Btn_submit_serverIP_pressed"]
+[connection signal="pressed" from="CustomizationMENU/MarginContainer/Section_name_customization/VBoxContainer/Btn_submit_name" to="." method="_on_Btn_submit_name_pressed"]
+[connection signal="pressed" from="CustomizationMENU/MarginContainer/Section_character_customization/HBoxContainer/btn_panda_select" to="." method="_on_btn_panda_select_pressed"]
+[connection signal="pressed" from="CustomizationMENU/MarginContainer/Section_character_customization/HBoxContainer/btn_groot_selet" to="." method="_on_btn_groot_selet_pressed"]

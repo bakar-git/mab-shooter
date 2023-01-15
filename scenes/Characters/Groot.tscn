@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/images/Characters/Groot/Groot.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Characters/GrootCollision.tres" type="Shape2D" id=3]
+
+[node name="Groot" instance=ExtResource( 1 )]
+char_name = "groot"
+
+[node name="name" parent="." index="0"]
+margin_top = -293.0
+margin_bottom = -112.0
+
+[node name="texture" parent="." index="1"]
+texture = ExtResource( 2 )
+
+[node name="left" parent="texture" index="0"]
+position = Vector2( -66.6667, 64.7059 )
+
+[node name="Sprite" parent="texture/left" index="0"]
+scale = Vector2( 1.5, 1.5 )
+
+[node name="right" parent="texture" index="1"]
+position = Vector2( 74, 65 )
+
+[node name="Sprite" parent="texture/right" index="0"]
+scale = Vector2( 1.5, 1.5 )
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2( 0, 16 )
+rotation = 0.0
+shape = ExtResource( 3 )
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( 0, 13.3333 )
+shape = ExtResource( 3 )

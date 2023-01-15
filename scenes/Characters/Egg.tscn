@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/images/Characters/empty.png" type="Texture" id=2]
+
+[node name="Character" instance=ExtResource( 1 )]
+char_name = "egg"
+
+[node name="texture" parent="." index="1"]
+texture = ExtResource( 2 )
+
+[node name="Area2D" parent="." index="7"]
+visible = false

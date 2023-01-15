@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/smg.mp3-c962f830531fd83bfc1f147ece732346.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/smg.mp3"
+dest_files=[ "res://.import/smg.mp3-c962f830531fd83bfc1f147ece732346.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

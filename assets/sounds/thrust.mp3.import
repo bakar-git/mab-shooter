@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/thrust.mp3-3c927b858e7f53dc561ca232b51d3bb1.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/thrust.mp3"
+dest_files=[ "res://.import/thrust.mp3-3c927b858e7f53dc561ca232b51d3bb1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

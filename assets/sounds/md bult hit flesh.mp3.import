@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/md bult hit flesh.mp3-acc6b9638d406259acd4bfa399921337.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/md bult hit flesh.mp3"
+dest_files=[ "res://.import/md bult hit flesh.mp3-acc6b9638d406259acd4bfa399921337.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

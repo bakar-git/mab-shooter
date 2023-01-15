@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/floorHit.mp3-ff111ed83ffe57515381d7173d0228d8.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/floorHit.mp3"
+dest_files=[ "res://.import/floorHit.mp3-ff111ed83ffe57515381d7173d0228d8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

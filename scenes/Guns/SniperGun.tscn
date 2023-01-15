@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Guns/Gun.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Bullets/LargeBullet.tscn" type="PackedScene" id=2]
+
+[node name="SniperGun" instance=ExtResource( 1 )]
+scale = Vector2( 1.5, 1.5 )
+bullet_speed = 2000
+gun_name = "sniper_gun"
+bullet = ExtResource( 2 )
+bullet_position = Vector2( 400, -30 )
+bullet_position_fliped = Vector2( 400, 30 )
+recoil = 800
+fire_rate = 1.1
+gun_shrink = Vector2( 0.8, 1 )
+bf_bullet = Color( 3, 2, 2, 1 )
+
+[node name="Position2D" parent="." index="1"]
+position = Vector2( 400, -30 )

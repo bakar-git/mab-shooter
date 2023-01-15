@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Characters/PandaCollision.tres" type="Shape2D" id=2]
+
+[node name="Panda" instance=ExtResource( 1 )]
+char_name = "panda"
+
+[node name="CollisionShape2D" parent="." index="2"]
+shape = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = ExtResource( 2 )

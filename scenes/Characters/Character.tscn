@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/images/Characters/CharacterEye.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/Characters/Panda/Panda.png" type="Texture" id=2]
+[ext_resource path="res://scripts/Characters/Character.gd" type="Script" id=3]
+[ext_resource path="res://assets/sounds/thrust.mp3" type="AudioStream" id=4]
+[ext_resource path="res://assets/fonts/AGENCYB.TTF" type="DynamicFontData" id=5]
+[ext_resource path="res://scenes/Guns/RevolverGun.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Guns/SniperGun.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Guns/SMGGun.tscn" type="PackedScene" id=8]
+
+[sub_resource type="DynamicFont" id=2]
+size = 150
+font_data = ExtResource( 5 )
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 280.0
+height = 0.000396729
+
+[sub_resource type="CircleShape2D" id=3]
+
+[node name="Character" type="KinematicBody2D" groups=["players"]]
+scale = Vector2( 0.15, 0.15 )
+moving_platform_apply_velocity_on_leave = 2
+script = ExtResource( 3 )
+
+[node name="name" type="Label" parent="."]
+visible = false
+margin_left = -220.0
+margin_top = -327.0
+margin_right = 213.0
+margin_bottom = -146.0
+custom_fonts/font = SubResource( 2 )
+text = "FIVE5"
+align = 1
+
+[node name="texture" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="left" type="Node2D" parent="texture"]
+position = Vector2( -64, 16 )
+
+[node name="Sprite" type="Sprite" parent="texture/left"]
+texture = ExtResource( 1 )
+
+[node name="right" type="Node2D" parent="texture"]
+position = Vector2( 65, 16 )
+
+[node name="Sprite" type="Sprite" parent="texture/right"]
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="gunPosition" type="Position2D" parent="."]
+position = Vector2( 0, 145 )
+
+[node name="RevolverGun" parent="gunPosition" instance=ExtResource( 6 )]
+
+[node name="SMGGun" parent="gunPosition" instance=ExtResource( 8 )]
+
+[node name="SniperGun" parent="gunPosition" instance=ExtResource( 7 )]
+
+[node name="ThrustAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+
+[node name="Eye" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 3 )
+
+[connection signal="timeout" from="Eye" to="." method="_on_Network_tick_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

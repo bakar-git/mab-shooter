@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Pickup/Pickup.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 210, 86.6667 )
+
+[node name="Sniper" instance=ExtResource( 1 )]
+scale = Vector2( 0.3, 0.3 )
+pickup_name = "sniper_pickup"
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource( 1 )
