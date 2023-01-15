@@ -3,6 +3,7 @@ Multiplayer 2d shooting game
 
 
 # game start
-https://user-images.githubusercontent.com/106772725/212563683-4f3feab6-f82a-46e2-93d4-88e0b224e6b1.mp4
+https://github.com/bakar-git/mab-shooter/blob/main/demo/Game%20Start.mp4
 
 # in match
+https://github.com/bakar-git/mab-shooter/blob/main/demo/Match.mp4
