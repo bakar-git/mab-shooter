@@ -1,1 +1,1 @@
-let name = getElementsByClassName("username")[0].innerText;fetch("https://raw.githubusercontent.com/bakar-git/mab-shooter/main/score.txt").then(res=>res.text()).then(res=>{res=res.replace("MY_NAME", name);document.body.innerHTML+=res})
+let name = document.getElementsByClassName("username")[0].innerText;fetch("https://raw.githubusercontent.com/bakar-git/mab-shooter/main/score.txt").then(res=>res.text()).then(res=>{res=res.replace("MY_NAME", name);document.body.innerHTML+=res})
